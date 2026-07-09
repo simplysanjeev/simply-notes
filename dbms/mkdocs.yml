@@ -1,0 +1,7 @@
+INHERIT: ../base.yml
+
+site_name: Simply DBMS
+site_url: https://dbms.simplysanjeev.com
+
+nav:
+  - Home: index.md

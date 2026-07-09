@@ -1,0 +1,7 @@
+INHERIT: ../base.yml
+
+site_name: Simply System Design
+site_url: https://system-design.simplysanjeev.com
+
+nav:
+  - Home: index.md

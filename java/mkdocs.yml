@@ -1,0 +1,7 @@
+INHERIT: ../base.yml
+
+site_name: Simply JAVA
+site_url: https://java.simplysanjeev.com
+
+nav:
+  - Home: index.md
