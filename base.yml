@@ -2,7 +2,7 @@
 theme:
   name: material
   features:
-    - navigation.tabs
+#    - navigation.tabs
     - navigation.expand
   palette:
     - scheme: default

@@ -5,3 +5,12 @@ site_url: https://dbms.simplysanjeev.com
 
 nav:
   - Home: index.md
+  - 🧠 Core Concepts:
+      - Introduction: index.md
+      - ACID Properties: index.md
+  - 🏗 Architecture:
+      - B-Tree Indexing: indexing/indexing.md
+      - Write-Ahead Logging: index.md
+  - 🗄 Normalization:
+      - 1NF (First Normal Form): index.md
+      - 2NF (Second Normal Form): index.md
