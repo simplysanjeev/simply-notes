@@ -1,0 +1,7 @@
+INHERIT: ../base.yml
+
+site_name: Simply Project
+site_url: https://project.simplysanjeev.com
+
+nav:
+  - Home: index.md
