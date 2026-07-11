@@ -13,10 +13,7 @@ Here is the complete blueprint of the infrastructure.
 To ensure a consistent design aesthetic across all sites without repeating code, the architecture uses a shared configuration model. The `mkdocs-material` theme is configured once at the root level, and individual subject folders inherit those rules.
 
 ### The Directory Structure
-
-=== "Project Tree"
-
-    ```text
+```text
     simply-docs/
     ├── requirements.txt      # Infrastructure as Code for Netlify dependencies
     ├── base.yml              # Global Material theme and color configurations
@@ -26,17 +23,14 @@ To ensure a consistent design aesthetic across all sites without repeating code,
     └── java/
         ├── mkdocs.yml        # Inherits base.yml, holds Java-specific navigation
         └── docs/             # Markdown files and /images folder
-    ```
+```
 
 ### Dependency Provisioning
 
 Instead of writing brittle installation scripts in the CI/CD UI, we use standard Python dependency management. Adding a `requirements.txt` file to the root directory triggers Netlify's native Python environment manager.
-
-=== "requirements.txt"
-
-    ```text
+```text
     mkdocs-material
-    ```
+```
 
 ---
 
