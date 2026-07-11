@@ -1,16 +1,20 @@
-# Simply Project
+# Welcome to Simply Projects
 
-Welcome to the Project repository. This is the synthesis of DSA, OS, Java, and DBMS—applied to large-scale, distributed systems.
+Hi, I'm Sanjeev. This site serves as a technical portfolio and documentation hub for my engineering projects.
 
-## 🎯 Core Focus Areas
-This manual focuses on high-level architecture, trade-offs, and scaling bottlenecks:
-* **Scalability:** Vertical vs. Horizontal scaling, Load Balancing, and Caching strategies (Redis/Memcached).
-* **Data Partitioning:** Consistent Hashing, Sharding, and Database Replication.
-* **Microservices:** API Gateways, Service Discovery, and Event-Driven Architecture (Kafka/RabbitMQ).
-* **Reliability:** Rate limiting, circuit breakers, and fault tolerance.
-
-## 🚀 Current Sprint
-* Comparing horizontal vs. vertical scaling trade-offs.
+The focus here is on backend system design, scalable infrastructure, and clean documentation. Below is the architectural playbook for my current deployment infrastructure.
 
 ---
-*Building deep intuition over memorization.*
+
+## 🏗️ Infrastructure & Deployment
+
+### [Simply Built: Multi-Site Monorepo](deployment.md)
+
+The deployment logs and architectural blueprints for the `simplysanjeev` documentation network.
+
+* **Focus:** Continuous Deployment (CI/CD), DNS Routing, Infrastructure as Code.
+* **Stack:** MkDocs Material, Netlify, Python, GoDaddy DNS.
+
+---
+
+> **Note:** This portfolio will be updated as new systems are designed and deployed.
