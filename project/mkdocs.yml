@@ -5,3 +5,4 @@ site_url: https://project.simplysanjeev.com
 
 nav:
   - Home: index.md
+  - Deployment Architecture: deployment.md
