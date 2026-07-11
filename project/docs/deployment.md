@@ -45,7 +45,8 @@ For each site, a new Netlify project is connected to the same repository with th
 * **Publish directory:** `dbms/site`
 
 !!! tip "Scaling the Architecture"
-To deploy a new subject, simply create a new site in Netlify connected to the same repo, and swap the word `dbms` for the new folder name (like `java` or `project`) in the build and publish commands.
+
+    To deploy a new subject, simply create a new site in Netlify connected to the same repo, and swap the word `dbms` for the new folder name (like `java` or `project`) in the build and publish commands.
 
 ---
 
@@ -55,6 +56,7 @@ Netlify generates edge-tracking URLs (e.g., `random-name.netlify.app`) by defaul
 
 ### Step 1: Root Domain Ownership Verification
 To prevent domain hijacking, Netlify requires proof of ownership for the root domain.
+
 1. Add the custom domain in Netlify (**Site configuration > Domain management**).
 2. Copy the provided verification token (e.g., `netlify-verification=xxxx`).
 3. In GoDaddy DNS settings, create a **TXT Record**:
@@ -63,12 +65,13 @@ To prevent domain hijacking, Netlify requires proof of ownership for the root do
 
 ### Step 2: CNAME Mapping
 Once verified, the actual traffic for the subdomain is routed using a Canonical Name (CNAME) record.
+
 * **Type:** `CNAME`
 * **Name:** `dbms` *(Prefix only)*
 * **Value:** `random-name.netlify.app` *(Target Netlify URL)*
 
 !!! success "Automated SSL Provisioning"
-Once the DNS records propagate globally (typically 15–30 minutes), Netlify's Let's Encrypt integration automatically detects the CNAME and provisions a free SSL certificate, securing the site over HTTPS.
+    Once the DNS records propagate globally (typically 15–30 minutes), Netlify's Let's Encrypt integration automatically detects the CNAME and provisions a free SSL certificate, securing the site over HTTPS.
 
 ---
 
@@ -79,6 +82,7 @@ To protect the brand and capture traffic from secondary Top-Level Domains (TLDs)
 Instead of consuming extra Netlify build minutes to handle redirects, this is managed purely at the DNS level using GoDaddy's **Subdomain Forwarding**.
 
 Inside the DNS settings for the secondary domain (`.in`):
+
 * **Subdomain:** `dbms`
 * **Forward to:** `https://dbms.simplysanjeev.com`
 * **Forward type:** `Permanent (301)`
@@ -96,4 +100,4 @@ To maximize Netlify's enterprise-grade Content Delivery Network (CDN), image hos
 * Markdown files reference images using standard relative paths: `![Schema](images/schema.png)`.
 
 !!! warning "Naming Convention Rule"
-All image filenames strictly use lowercase characters and hyphens (e.g., `b-tree-index.png`). Avoid spaces or uppercase letters to prevent path resolution failures in Netlify's case-sensitive Linux build nodes.
+    All image filenames strictly use lowercase characters and hyphens (e.g., `b-tree-index.png`). Avoid spaces or uppercase letters to prevent path resolution failures in Netlify's case-sensitive Linux build nodes.

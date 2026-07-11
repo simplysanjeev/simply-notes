@@ -4,11 +4,14 @@ theme:
   features:
 #    - navigation.tabs
     - navigation.expand
+    - content.code.copy
   palette:
     - scheme: default
       primary: custom
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences:
